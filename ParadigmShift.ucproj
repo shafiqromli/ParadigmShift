@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UccMultiPackageBuild>False</UccMultiPackageBuild>
+    <BuildArgs>
+    </BuildArgs>
+    <UccPackageOrder>
+    </UccPackageOrder>
+    <OverrideScriptPath>True</OverrideScriptPath>
+    <UccScriptsPath>D:\UDK\UDK\Script</UccScriptsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <ProductVersion>1.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ed8b8388-695b-4d8f-8c9f-adee0583a197}</ProjectGuid>
+    <OutputType>UserMod</OutputType>
+    <ProjectType>UnrealScript</ProjectType>
+    <RootNamespace>ParadigmShift</RootNamespace>
+    <AssemblyName>ParadigmShift</AssemblyName>
+    <Name>ParadigmShift</Name>
+    <TargetGame>UnrealEngine 3 Mod</TargetGame>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UseUnpublished>False</UseUnpublished>
+    <ForceWindowedMode>True</ForceWindowedMode>
+    <WindowWidth>1024</WindowWidth>
+    <WindowHeight>768</WindowHeight>
+    <ShowLogWindow>False</ShowLogWindow>
+    <LogToFile>False</LogToFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UseUnpublished>False</UseUnpublished>
+    <ForceWindowedMode>False</ForceWindowedMode>
+    <ShowLogWindow>False</ShowLogWindow>
+    <LogToFile>False</LogToFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="*\Classes\*.uc" />
+    <Compile Include="Classes\PSCarriedObject.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSDeathmatch.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSExperienceSystem.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSGame.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSGameObjective.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSGameReplicationInfo.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSHUD.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSPawn.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSPlayerController.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSPlayerInput.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSPlayerReplicationInfo.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSPlayerStart.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSSeqAct_LevelLoader.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSSeqAct_LevelUnloader.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSTrigger.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSWeapon.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\PSWeap_ShockRifleBase.uc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="**\*.uci" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes" />
+    <Folder Include="Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Config Include="..\..\..\UDKGame\Config\DefaultCharInfo.ini">
+      <Link>Config\DefaultCharInfo.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultCompat.ini">
+      <Link>Config\DefaultCompat.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultEditor.ini">
+      <Link>Config\DefaultEditor.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultEditorKeyBindings.ini">
+      <Link>Config\DefaultEditorKeyBindings.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultEditorUDK.ini">
+      <Link>Config\DefaultEditorUDK.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultEditorUserSettings.ini">
+      <Link>Config\DefaultEditorUserSettings.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultEngine.ini">
+      <Link>Config\DefaultEngine.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultEngineUDK.ini">
+      <Link>Config\DefaultEngineUDK.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultGame.ini">
+      <Link>Config\DefaultGame.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultGameUDK.ini">
+      <Link>Config\DefaultGameUDK.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultInput.ini">
+      <Link>Config\DefaultInput.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultInputDefaults.ini">
+      <Link>Config\DefaultInputDefaults.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultLightmass.ini">
+      <Link>Config\DefaultLightmass.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultUI.ini">
+      <Link>Config\DefaultUI.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultWeapon.ini">
+      <Link>Config\DefaultWeapon.ini</Link>
+    </Config>
+    <Config Include="..\..\..\UDKGame\Config\DefaultWeaponDefaults.ini">
+      <Link>Config\DefaultWeaponDefaults.ini</Link>
+    </Config>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\PixelMine\UnrealScript.targets" />
+</Project>
